@@ -8,17 +8,28 @@ demand. When the job is "let the agent read a few issues", the CLI is usually th
 optimal front-end - same answer, fewer tokens, less standing access. This exercise makes
 you feel that difference on the meter.
 
-## Setup (once)
+## Setup (once) - pick your language
 
+**Python** (default):
 ```bash
 pip install "mcp[cli]"          # the MCP Python SDK (FastMCP)
 python server.py                # sanity check: should start and wait on stdio (Ctrl+C to stop)
 ```
 
+**Go** (same two tools, same data - in `go/`):
+```bash
+cd go
+go mod tidy                     # fetch github.com/modelcontextprotocol/go-sdk
+go run .                        # sanity check (Ctrl+C to stop); reads ../fake-jira.json
+```
+Reference CLI answer for the Go track: `reference/jira-lite.go` (stdlib only, run `go run reference/jira-lite.go list`).
+
 ## Step 1 - run the MCP and use it (this is the BEFORE)
 
 ```bash
-codex mcp add jira-lite -- python /ABS/PATH/TO/server.py
+codex mcp add jira-lite -- python /ABS/PATH/TO/server.py     # Python
+# or, Go (run from the go/ folder so ../fake-jira.json resolves):
+#   cd go && codex mcp add jira-lite -- go run .
 codex mcp list
 ```
 In Codex:
