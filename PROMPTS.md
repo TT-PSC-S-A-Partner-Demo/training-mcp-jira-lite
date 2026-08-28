@@ -12,9 +12,11 @@ you feel that difference on the meter.
 
 **Python** (default):
 ```bash
-pip install "mcp[cli]"          # the MCP Python SDK (FastMCP)
+pip install "mcp[cli]<2"          # the MCP Python SDK (FastMCP)
 python server.py                # sanity check: should start and wait on stdio (Ctrl+C to stop)
 ```
+> The `<2` pin matters: this server uses the `FastMCP` API from MCP SDK **1.x**. The
+> unpinned latest (2.x) changed that API and will not run this file as-is.
 
 **Go** (same two tools, same data - in `go/`):
 ```bash

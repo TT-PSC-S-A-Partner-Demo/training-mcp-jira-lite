@@ -9,7 +9,7 @@ the SAME logic is exposed as a CLI. Same answers, a lighter interface.
 Run it directly to sanity-check:   python server.py
 Wire it into Codex (stdio):        codex mcp add jira-lite -- python /abs/path/server.py
 
-Needs the MCP SDK:                 pip install "mcp[cli]"
+Needs the MCP SDK:                 pip install "mcp[cli]<2"
 """
 import json
 import pathlib

@@ -16,7 +16,7 @@ PROMPTS.md       # full exercise steps
 ## Setup
 
 ```bash
-pip install "mcp[cli]"     # the MCP Python SDK
+pip install "mcp[cli]<2"     # the MCP Python SDK
 python server.py           # sanity check (Ctrl+C to stop)
 ```
 
